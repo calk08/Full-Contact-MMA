@@ -289,7 +289,38 @@ li {
     padding: 0.5em 0;
 }
 
-@media (max-width: 800px) {
+/* Large screens */
+@media (min-width: 1200px) {
+    .header-container {
+        padding: 60px 40px;
+        margin-bottom: 12rem;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    .logo {
+        max-width: 100px;
+        margin-right: 25px;
+    }
+}
+
+/* Medium-large screens */
+@media (max-width: 1199px) and (min-width: 801px) {
+    .header-container {
+        padding: 40px 20px;
+        margin-bottom: 10rem;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+    .logo {
+        max-width: 80px;
+        margin-right: 20px;
+    }
+}
+
+/* Small-medium screens */
+@media (max-width: 800px) and (min-width: 481px) {
     main {
         width: 100%;
         padding: 20px;
@@ -298,15 +329,43 @@ li {
     }
     .header-container {
         width: 100%;
-        padding: 20px;
-        margin: 0;
+        padding: 30px 20px;
+        margin-bottom: 6rem;
     }
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
+    }
+    .logo {
+        max-width: 70px;
+        margin-right: 18px;
+    }
+    body {
+        padding: 0;
+    }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 480px) {
+    main {
+        width: 100%;
+        padding: 15px;
+        margin: 0;
+        min-height: calc(100vh - 120px);
+    }
+    .header-container {
+        width: 100%;
+        padding: 20px 15px;
+        margin-bottom: 4rem;
+        flex-direction: column;
+        gap: 15px;
+    }
+    h1 {
+        font-size: 2.2rem;
+        text-align: center;
     }
     .logo {
         max-width: 60px;
-        margin-right: 15px;
+        margin-right: 0;
     }
     body {
         padding: 0;
