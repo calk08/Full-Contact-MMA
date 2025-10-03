@@ -118,6 +118,19 @@ li {
     margin-bottom: 1em;
 }
 
+/* Email link styling */
+.dropdown-content a[href^="mailto:"] {
+    color: #c53030;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a[href^="mailto:"]:hover {
+    color: #e53e3e;
+    text-decoration: underline;
+}
+
 /* Social Media Container */
 .social-media-container {
     display: flex;
