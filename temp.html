@@ -62,16 +62,47 @@
         </div>
 
         <div class="dropdown-section">
-            <h2 class="dropdown-header text-red-600" onclick="toggleDropdown('services')">
-                Our Services <span class="dropdown-arrow" id="services-arrow">▼</span>
+            <h2 class="dropdown-header text-red-600" onclick="toggleDropdown('timetable')">
+                Timetable <span class="dropdown-arrow" id="timetable-arrow">▼</span>
             </h2>
-            <div class="dropdown-content" id="services-content">
-                <ul>
-                    <li>Custom Training Programs</li>
-                    <li>Personal Training</li>
-                    <li>Group Classes</li>
-                    <li>Technical Support</li>
-                </ul>
+            <div class="dropdown-content" id="timetable-content">
+                <div class="timetable-container">
+                    <div class="timetable-header">
+                        <div class="time-slot">Time</div>
+                        <div class="day-header">Monday</div>
+                        <div class="day-header">Tuesday</div>
+                        <div class="day-header">Wednesday</div>
+                        <div class="day-header">Thursday</div>
+                        <div class="day-header">Friday</div>
+                        <div class="day-header">Saturday</div>
+                        <div class="day-header">Sunday</div>
+                    </div>
+                    <div class="timetable-row">
+                        <div class="time-slot">19:00</div>
+                        <div class="session-slot empty"></div>
+                        <div class="session-slot active" onclick="showSessionDetails('tuesday')">
+                            <span class="session-title">MMA Training</span>
+                            <span class="session-duration">60 min</span>
+                        </div>
+                        <div class="session-slot empty"></div>
+                        <div class="session-slot active" onclick="showSessionDetails('thursday')">
+                            <span class="session-title">MMA Training</span>
+                            <span class="session-duration">60 min</span>
+                        </div>
+                        <div class="session-slot empty"></div>
+                        <div class="session-slot empty"></div>
+                        <div class="session-slot empty"></div>
+                    </div>
+                </div>
+                <div id="session-details" class="session-details hidden">
+                    <h3 id="session-day"></h3>
+                    <p><strong>Time:</strong> 19:00 - 20:00</p>
+                    <p><strong>Duration:</strong> 60 minutes</p>
+                    <p><strong>Type:</strong> Mixed Martial Arts Training</p>
+                    <p><strong>Level:</strong> All levels welcome</p>
+                    <p><strong>Location:</strong> Evolution Gym, Coventry</p>
+                    <button class="book-session-btn" onclick="bookSession()">Book This Session</button>
+                </div>
             </div>
         </div>
 

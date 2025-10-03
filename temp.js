@@ -30,3 +30,23 @@ function toggleDropdown(sectionId) {
     });
     */
 }
+
+// Timetable interaction functions
+function showSessionDetails(day) {
+    const sessionDetails = document.getElementById('session-details');
+    const sessionDay = document.getElementById('session-day');
+    
+    // Show the session details
+    sessionDetails.classList.remove('hidden');
+    
+    // Set the day title
+    sessionDay.textContent = `${day.charAt(0).toUpperCase() + day.slice(1)} MMA Training`;
+    
+    // Scroll to the session details
+    sessionDetails.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function bookSession() {
+    // This could integrate with a booking system
+    alert('Booking functionality coming soon! Please contact us directly to book your session.');
+}
