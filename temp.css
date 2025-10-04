@@ -121,7 +121,7 @@ li {
 /* Email link styling */
 .dropdown-content a[href^="mailto:"] {
     color: #c53030;
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: bold;
     transition: all 0.3s ease;
 }
@@ -400,6 +400,13 @@ li {
     opacity: 0.9;
 }
 
+.session-cost {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #ffd700;
+    margin-top: 2px;
+}
+
 .session-details {
     background: linear-gradient(120deg, #2a2a2a 0%, #3d3d3d 100%);
     border-radius: 10px;
@@ -462,6 +469,10 @@ li {
     
     .session-duration {
         font-size: 0.6rem;
+    }
+    
+    .session-cost {
+        font-size: 0.65rem;
     }
     
     .session-slot {
